@@ -10,7 +10,7 @@ sudo apt-get install python-pip
 sudo pip install Django  (1.6.5, latest production version) 
 sudo apt-get install python-psycopg2 (for postgres)
 sudo apt-get install postgresql-client (install postgres client)
-### deploy ###
+(deploy:)
 pip install gunicorn
 sudo apt-get install nginx
 
