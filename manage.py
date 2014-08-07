@@ -3,7 +3,10 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ballers.settings")
+    try:
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "development_settings")
+    except ImportError:
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "production_settings")
 
     from django.core.management import execute_from_command_line
 
