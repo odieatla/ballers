@@ -18,7 +18,7 @@ run in development mode:
 ubuntu@ip:~/ballers$ python manage.py runserver 0.0.0.0:8000  
 
 run in production mode:  
-ubuntu@ip-172-31-4-40:~/ballers/config$ gunicorn ballers_wsgi:application --bind 0.0.0.0:8002  
+ubuntu@ip-172-31-4-40:~/ballers$ gunicorn ballers_wsgi:application --bind 0.0.0.0:8002  
 
 EC2 Security Group, Inbound, open ports:  
 22, 8000,8002, 8080, 5432  
