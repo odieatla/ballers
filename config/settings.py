@@ -10,15 +10,23 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
+DEBUG = True
+# ===========================
+# = Directory Declaractions =
+# ===========================
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'))
+#MEDIA_ROOT    = os.path.join(BASE_DIR, 'media')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+# ===================
+# = Global Settings =
+# ===================
 
-TEMPLATE_DEBUG = True
-
+#MEDIA_URL = '/media/'
+SECRET_KEY = 'okk^$ig)_qzqc_d5cj-e5hz9b1($0czi8v8jy%xqu#e6aqxd3j'
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -29,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south',
+    'court',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -40,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'config.urls'
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'ballers_wsgi.application'
 
 
 # Database
@@ -68,3 +78,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+from local_settings import *
