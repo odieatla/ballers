@@ -39,7 +39,7 @@ Thumbs.db
 # Python files #
 #####################
 *.pyc
-development_settings.py
+local_settings.py
 
 # Temp files #
 ####################
