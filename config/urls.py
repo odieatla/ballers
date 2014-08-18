@@ -11,4 +11,5 @@ urlpatterns = patterns('',
 
     url(r'^$', court_views.index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login/', court_views.login, name="login"),
 )
